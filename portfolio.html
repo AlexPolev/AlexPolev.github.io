@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Полевщиков Александр Юрьевич — Резюме / Portfolio</title>
+  <meta name="description" content="Резюме Александра Полевщикова: образование, опыт, достижения, публикации и навыки." />
+  <style>
+    :root {
+      --bg: #0b0c0f;
+      --card: #13151a;
+      --muted: #94a3b8;
+      --text: #e5e7eb;
+      --accent: #88AC0B; /* из LaTeX темы */
+      --accent-2: #B6073F;
+      --ring: rgba(136,172,11,0.45);
+    }
+    @media (prefers-color-scheme: light) {
+      :root { --bg:#ffffff; --card:#f6f7f9; --text:#0f172a; --muted:#475569; --ring: rgba(182,7,63,0.15);}  
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: radial-gradient(1200px 800px at 10% -10%, rgba(182,7,63,0.07), transparent 40%),
+                  radial-gradient(1000px 600px at 110% -20%, rgba(136,172,11,0.08), transparent 35%),
+                  var(--bg);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 960px; margin: 0 auto; padding: 32px 20px 60px; }
+
+    .header { display: grid; grid-template-columns: 1fr; gap: 20px; align-items: center; margin-bottom: 16px; }
+    @media (min-width: 720px) { .header { grid-template-columns: 160px 1fr; align-items: center; } }
+    .title { font-weight: 800; letter-spacing: .4px; font-size: clamp(28px, 4vw, 44px); margin: 0; }
+    .subtitle { margin: 0; color: var(--muted); font-size: clamp(15px, 2vw, 18px); }
+
+    .badge { display:inline-flex; align-items:center; gap:.5ch; padding:.25rem .6rem; border:1px solid color-mix(in oklab, var(--accent), #fff 10%);
+             border-radius: 999px; background: color-mix(in oklab, var(--accent), transparent 85%); color: var(--text); font-size: 12px; }
+
+    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 860px) { .grid { grid-template-columns: 2fr 1fr; } }
+
+    .card { background: color-mix(in oklab, var(--card), transparent 0%); border: 1px solid color-mix(in oklab, var(--card), #000 10%);
+            border-radius: 18px; padding: 18px 18px; box-shadow: 0 6px 22px -12px rgba(0,0,0,.35); }
+    .card h2 { margin: 4px 0 8px; font-size: 18px; letter-spacing:.3px; }
+    .card h3 { margin: 0; font-size: 16px; }
+    .muted { color: var(--muted); }
+
+    .contact { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-top: 4px; }
+    .contact a, .contact span { display:inline-flex; align-items:center; gap:.5ch; padding:.35rem .6rem; border-radius: 999px; background: color-mix(in oklab,var(--card), #fff 5%);
+                                border:1px solid color-mix(in oklab, var(--card), #000 12%); }
+
+    .list { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 10px; }
+    .item { display: grid; gap: 6px; border-left: 3px solid color-mix(in oklab, var(--accent), #000 10%); padding-left: 12px; }
+    .when { font-size: 13px; color: var(--muted); }
+
+    .skills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .chip { padding: .4rem .7rem; border-radius: 12px; background: color-mix(in oklab, var(--accent), transparent 86%);
+            border:1px solid var(--ring); font-weight: 600; font-size: 13px; }
+
+    .footer { margin-top: 28px; color: var(--muted); font-size: 13px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+
+    /* Печать */
+    @media print {
+      body { background: #fff; }
+      .card { box-shadow: none; }
+      a { color: inherit; text-decoration: underline; }
+      .footer { display:none; }
+    }
+  </style>
+  
+  <!-- JSON-LD Schema.org (Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alexander Yurievich Polevshchikov",
+    "birthDate": "2002-06-28",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Surgut",
+      "streetAddress": "31/2 Rabochaya Street",
+      "addressCountry": "RU"
+    },
+    "email": ["mailto:aypolevschikov@edu.hse.ru", "mailto:aypolevschikov@edu.hse.ru"],
+    "telephone": "+7-950-527-79-07",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Surgut State University"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="photo.png" alt="Фото" style="width:140px;border-radius:12px;object-fit:cover;" />
+      <div>
+        <h1 class="title">Александр Полевщиков</h1>
+        <p class="subtitle">Студент магистратуры «Вычислительная биология и биоинформатика» (ВШЭ, Санкт-Петербург). </p>
+        <div class="contact" aria-label="Контакты">
+          <a href="tel:+79505277907" title="Позвонить">📞 +7 950 527‑79‑07</a>
+          <a href="mailto:aypolevschikov@edu.hse.ru" title="Написать на e‑mail">✉️ aypolevschikov@edu.hse.ru</a>
+          <span title="Локация">📍 Санкт-Петербург</span>
+          <!-- Можешь добавить GitHub/LinkedIn позже: <a href="#">GitHub</a> -->
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Образование</h2>
+        <ul class="list">
+          <li class="item">
+            <h3>Сургутский государственный университет — Бакалавриат, «Прикладная математика и информатика»</h3>
+            <div class="when">2021 — 2025</div>
+            <p class="muted">ВКР: «Численное моделирование переноса примеси в сплошной среде».</p>
+          </li>
+                  <li class="item">
+            <h3>Высшая школа экономики — Магистратура, «Вычислительная биология и биоинформатика»</h3>
+            <div class="when">2025 — 2027</div>
+          </li>
+        </ul>
+      </section>
+
+      <aside class="card">
+        <h2>Навыки</h2>
+        <div class="skills">
+          <span class="chip">C</span>
+          <span class="chip">C++</span>
+          <span class="chip">Python</span>
+          <span class="chip">MATLAB</span>
+          <span class="chip">OpenFOAM</span>
+          <span class="chip">LaTeX</span>
+        </div>
+      </aside>
+    </div>
+
+    <section class="card">
+      <h2>Практика</h2>
+      <ul class="list">
+        <li class="item">
+          <h3>ФИЦ ИСА РАН (г. Сургут) — Разработка ПО для численного решения задачи Коши для СОДУ</h3>
+          <div class="when">Июнь 2024 — Август 2024</div>
+          <p class="muted">Участие в проекте по разработке программного обеспечения для численного решения задач Коши для систем ОДУ.</p>
+        </li>
+      </ul>
+    </section>
+
+    
+
+    <section class="card">
+      <h2>Достижения</h2>
+      <ul class="list">
+        <li class="item">
+          <h3>XXVIII Открытая региональная студенческая научная конференция им. Г. И. Назина «Наука 60-й параллели»</h3>
+          <div class="when">4 апреля 2024, СурГУ — доклад «Тензоры в механике сплошных сред»</div>
+        </li>
+        <li class="item">
+          <h3>Студенческая олимпиада по высшей математике — Диплом I степени</h3>
+          <div class="when">10 ноября 2022; 10 ноября 2023 — СурГУ</div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Публикации</h2>
+      <ul class="list">
+        <li class="item">
+          <h3>«Развитие навыков математического моделирования на занятиях по дисциплине “Дифференциальные уравнения”»</h3>
+          <div class="when">Май 2024 — публикация, метаданные на eLIBRARY.ru</div>
+          
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Обо мне</h2>
+      <p>Я целеустремлённый и спокойный человек, ценю долгую работу над задачами. Раньше занимался боксом, а сейчас увлечён настольным теннисом — много играю как в спортзале, так и за уличными столами в парках.</p>
+    </section>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
